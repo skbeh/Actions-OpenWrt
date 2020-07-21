@@ -49,7 +49,7 @@ jobs:
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         docker rmi $(docker images -q)
-        sudo -E apt-get -qq remove --purge azure-cli ghc zulu* hhvm llvm* firefox google* dotnet* powershell mysql* php* mssql-tools msodbcsql17
+        sudo -E apt-get -qq remove --purge azure-cli ghc zulu* hhvm llvm* firefox google* dotnet* mysql* php*
         sudo -E apt-get -qq update
         sudo -E apt-get -qq full-upgrade
         #sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804)
